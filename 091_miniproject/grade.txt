@@ -1,0 +1,39 @@
+Grading at 04/28/2022:20:28:55.388952
+For commit ID e6f5a6cdbbc7bbe7037733f60de1a0f80a05fb7f
+Grading at Thu Apr 28 16:28:51 EDT 2022
+Doing some basic checking for your submission.
+
+Attempting to compile
+cmake
+make clean
+rm -f *.o *~ path-step1 path-step2 path-step3 path-step4 readFile pathPlanning
+make
+g++ -std=gnu++98 -pedantic -Wall -Werror -ggdb3 -c readFile.cpp
+g++ -std=gnu++98 -pedantic -Wall -Werror -ggdb3 -c path-step1.cpp
+g++ -std=gnu++98 -pedantic -Wall -Werror -ggdb3 -c pathPlanning.cpp
+g++ -o path-step1 readFile.o path-step1.o pathPlanning.o
+g++ -std=gnu++98 -pedantic -Wall -Werror -ggdb3 -c path-step2.cpp
+g++ -o path-step2 readFile.o path-step2.o pathPlanning.o
+g++ -std=gnu++98 -pedantic -Wall -Werror -ggdb3 -c path-step3.cpp
+g++ -o path-step3 readFile.o path-step3.o pathPlanning.o
+g++ -std=gnu++98 -pedantic -Wall -Werror -ggdb3 -c path-step4.cpp
+g++ -o path-step4 readFile.o path-step4.o pathPlanning.o
+
+You have chosen the Path Planning miniproject!
+Checking make clean and make by removing all executables
+Running make again
+g++ -o path-step1 readFile.o path-step1.o pathPlanning.o
+g++ -o path-step2 readFile.o path-step2.o pathPlanning.o
+g++ -o path-step3 readFile.o path-step3.o pathPlanning.o
+g++ -o path-step4 readFile.o path-step4.o pathPlanning.o
+Step 1: found
+Step 2: found
+Step 3: found
+Step 4: found
+
+Found TESTING.txt (good)
+
+You have the passed the pregrader tests
+You should still run comprehensive tests of your own
+
+Overall Grade: NO GRADE YET

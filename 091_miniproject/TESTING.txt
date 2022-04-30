@@ -1,0 +1,220 @@
+Path_Planning
+
+/*************************** Test for path-step1 ****************************/
+/***********************************************/
+1.	Check if I can get the same result as README
+
+./path-step1 grid_map.txt
+
+// Expected result:    print the graph information (nodes & edges)
+/***********************************************/
+
+/***********************************************/
+2.	Check the command arguments
+
+./path-step1 
+./path-step1 grid_map.txt 0 23
+
+// Expected result:    error: Wrong number of command arguments!
+// Expected result:    error: Wrong number of command arguments!
+/***********************************************/
+
+/***********************************************/
+3.	Check whether we can open the file and whether there is such a file
+
+./path-step1 grid_map1.txt
+./path-step1 a 
+
+// Expected result:    error: fail to open file
+// Expected result:    error: fail to open file
+/***********************************************/
+
+/***********************************************/
+4.	Check if the file is in correct format: 
+The first line is $nodes, then following lines are node information including id, x coordinate, y coordinate: 
+int double double
+After nodes information, there will be a line $edges, then following lines are edge information with two points’ id:
+int int
+If there is a blank line (the last line in grid_map.txt is blank), I choose to ignore it.
+
+In grid_map_test1.txt, I delete the “$nodes”, and I put it that “$nodes” must be at the first line.
+In grid_map_test2.txt, I change the node information from three to four in some line.
+In grid_map_test3.txt, I change one node’s id from int to double.
+In grid_map_test4.txt, I change one node’s position from double to illegal format: 1.a
+In grid_map_test5.txt, I delete the “$Edge” line
+In grid_map_test6.txt, I add a duplicate node (the id appears before) (share the case that the id of node is discontinuous)
+In grid_map_test7.txt, I change one node’s id to negative (but the point’s x or y can be negative)
+
+./path-step1 grid_map_test1.txt
+./path-step1 grid_map_test2.txt
+./path-step1 grid_map_test3.txt
+./path-step1 grid_map_test4.txt
+./path-step1 grid_map_test5.txt
+./path-step1 grid_map_test6.txt
+./path-step1 grid_map_test7.txt
+
+// tips: I use the same idea to check edge format, so here I do not include test for edge.
+
+// Expected result:    Error in the input file!
+// Expected result:    Invalid node information!
+// Expected result:    Invalid node information!
+// Expected result:    Invalid node information!
+// Expected result:    Error in the input file!
+// Expected result:    Wrong node information is given!
+// Expected result:    Invalid node information!
+/***********************************************/
+/************************* The end of path-step1 **************************/
+
+
+/*************************** Test for path-step2 ****************************/
+/***********************************************/
+5.	Check if I can get the same result as README
+
+./path-step2 grid_map.txt 0 23
+
+// Expected result:    The same answer as in the README: 0 1 2 9 16 23 : 2.92094
+/***********************************************/
+
+/***********************************************/
+6.	Check the command arguments
+
+./path-step2 grid_map.txt 0 
+./path-step2 grid_map.txt 0 23 5
+
+// Expected result:    error: Wrong number of command arguments!
+// Expected result:    error: Wrong number of command arguments!
+/***********************************************/
+
+/***********************************************/
+7.	Check if the given starting node or ending node is in the graph
+
+./path-step2 grid_map.txt 0 24
+./path-step2 grid_map.txt -1 23
+
+// Expected result:    error: The node is out of range!
+// Expected result:    error: Wrong format of input node! (id cannot be negative)
+/***********************************************/
+
+/***********************************************/
+8.	Check if I can get result if start node’s id is larger than end node’s id, and whether I can get the same distance if reverse the start node and end node.
+
+./path-step2 grid_map.txt 23 0
+
+// Expected result:    23 16 15 8 7 0 : 2.92094
+// Explanation:       Although the path is different, the path is also the shortest.
+/***********************************************/
+/************************* The end of path-step2 **************************/
+
+
+/*************************** Test for path-step3 ****************************/
+/***********************************************/
+9.	Check if I can get the same result as README
+
+./path-step2 grid_map.txt obstacle.txt 0 23
+
+// Expected result:    The same answer as in the README: 0 6 13 20 21 22 23 : 3.18062
+/***********************************************/
+
+/***********************************************/
+10.	Check the command arguments
+
+./path-step3 grid_map.txt obstacle.txt 0
+./path-step3 grid_map.txt obstacle.txt 0 23 -a
+
+// Expected result:    error: Wrong number of command arguments!
+// Expected result:    error: Wrong number of command arguments!
+/***********************************************/
+
+/***********************************************/
+11.	Check if the given starting node or ending node is in the graph
+
+./path-step2 grid_map.txt 0 24
+./path-step2 grid_map.txt -1 23
+
+// Expected result:    error: The node is out of range!
+// Expected result:    error: Wrong format of input node! 
+// (id cannot be negative)
+/***********************************************/
+
+/***********************************************/
+12.	Check if the file is in correct format: 
+The first line is $nodes, then following lines are node information including id, x coordinate, y coordinate: 
+int double double
+After nodes information, there will be a line $edges, then following lines are edge information with two points’ id:
+int int
+If there is a blank line (the last line in grid_map.txt is blank), I choose to ignore it.
+
+In obstacle_test1.txt, I leave no obstacle in the file
+In obstacle_test2.txt, I input only one node in the file, which is unacceptable according to README
+In obstacle_test3.txt, I change one node’s id from to negative.
+In obstacle_test4.txt, I have two obstacles in the file
+In obstacle_test4.txt, one obstacle’s node is out of range, with id 24
+
+./path-step3 grid_map.txt obstacle_test1.txt 0 23
+./path-step3 grid_map.txt obstacle_test2.txt 0 23
+./path-step3 grid_map.txt obstacle_test3.txt 0 23
+./path-step3 grid_map.txt obstacle_test4.txt 0 23
+./path-step3 grid_map.txt obstacle_test5.txt 0 23
+
+// Expected result:    0 1 2 9 16 23 : 2.92094      which is same as step2
+// Expected result:    Wrong format of obstacles!
+// Expected result:    Invalid obstacle information!
+// Expected result:    0 23 : inf     as I set the distance as inf if the goal node is unreachable.
+// Expected result:    Obstacle Node Out of Range!
+/***********************************************/
+
+/***********************************************/
+13.	Treat the path inside the polygon forming by obstacle as valid.
+The obstacle is just line, not the whole area, so the path inside the obstacle is still valid. We only exclude those edges that interact with the obstacle’s edge.
+/***********************************************/
+
+/***********************************************/
+14.	If node is on the obstacle, then all the edge will be deleted, but the point still can be reached if the start and the end is the same
+Node 8 is on the edge of obstacle, so its all edges are removed, but it can be reached by starting from it.
+
+./path-step3 grid_map.txt obstacle.txt 2 2
+./path-step3 grid_map.txt obstacle.txt 0 2
+./path-step3 grid_map.txt obstacle.txt 8 8
+./path-step3 grid_map.txt obstacle.txt 0 8
+
+// Expected result:    2 : 0
+// Expected result:    0 2 : inf
+// Expected result:    8 : 0
+// Expected result:    0 8 : inf
+/***********************************************/
+/************************* The end of path-step3 **************************/
+
+
+/*************************** Test for path-step4 ****************************/
+/***********************************************/
+15.	Check if I can get the same result as README
+
+./path-step4 grid_map.txt obstacle.txt 0 23
+./path-step4 grid_map.txt obstacle.txt 0 23 -a
+
+// Expected result:    The same answer as in the README: 0 6 13 20 21 22 23 : 3.18062
+// Expected result:    The same answer as in the README: 0 7 13 20 21 22 23 : 3.18062
+/***********************************************/
+
+/***********************************************/
+16.	Check the command arguments
+
+./path-step4 grid_map.txt obstacle.txt 0
+./path-step4 grid_map.txt obstacle.txt 0 23 -b
+
+// Expected result:    error: Wrong number of command arguments!
+// Expected result:    error: Wrong format of input, use ‘-a’ if you want A* search
+/***********************************************/
+
+/***********************************************/
+17.	Check if the given starting node or ending node is in the graph
+
+./path-step4 grid_map.txt obstacle.txt 0 24 -a
+./path-step4 grid_map.txt obstacle.txt -1 23 -a
+
+// Expected result:    error: The node is out of range!
+// Expected result:    error: Wrong format of input node! 
+// (id cannot be negative)
+/***********************************************/
+/************************* The end of path-step4 **************************/
+

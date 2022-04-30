@@ -1,0 +1,108 @@
+Grading at 04/14/2022:02:47:06.601760
+For commit ID ed34cd0c0e02db8a86b0ed2af02c4433a5763b80
+Grading at Wed Apr 13 22:46:54 EDT 2022
+rm -f *~ *.o ret_portfolio
+Attempting to compile ret_portfolio
+gcc -o ret_portfolio -std=gnu99 -pedantic -Wall -Werror -ggdb3 retirement.c -lm
+The code compiled.
+
+=========================================================================
+Functionality
+
++-----------------------------------------------------------------------+
+Test case 1
+Wrong number of command arguments!: Success
+Your program successfully indicated a failure case
+                                                         [3/3]
++-----------------------------------------------------------------------+
+Test case 2
+No file!: No such file or directory
+Your program successfully indicated a failure case
+                                                         [3/3]
++-----------------------------------------------------------------------+
+Test case 3
+No file!: No such file or directory
+Your program successfully indicated a failure case
+                                                         [3/3]
++-----------------------------------------------------------------------+
+Test case 4
+Wrong format of time!: Success
+Your program successfully indicated a failure case
+                                                         [3/3]
++-----------------------------------------------------------------------+
+Test case 5
+Wrong format of month!: Success
+Your program successfully indicated a failure case
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 6
+Wrong format of time!: Success
+Your program successfully indicated a failure case
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 7
+Wrong format of month!: Success
+Your program successfully indicated a failure case
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 8
+Wrong number of command arguments!: Success
+Your program successfully indicated a failure case
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 9
+Your file matched the expected output
+                                                         [30/30]
++-----------------------------------------------------------------------+
+Test case 10
+Your file matched the expected output
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 11
+Your file matched the expected output
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 12
+Your file matched the expected output
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 13
+Your file matched the expected output
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 14
+Your file matched the expected output
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 15
+Your file matched the expected output
+                                                         [5/5]
+
+Functionality total                                      [80/80]
+
+=========================================================================
+Testing
+
+Comments:
+Excellent test cases.  Very well done.
+
+Testing total                                            [10/10]
+
+=========================================================================
+Code quality
+
+Abstration:    Excellent
+Naming:        Excellent
+Formatting:    Excellent
+Documentation: Excellent
+Comments:
+Nicely done!
+
+Good use of helper functions, good naming, and good documentation.  You passed 
+all test cases flawlessly.
+
+Quality total                                            [10/10]
+
+=========================================================================
+
+Overall Grade: 100
