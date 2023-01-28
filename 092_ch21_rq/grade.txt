@@ -1,7 +1,0 @@
-Grading at 04/04/2022:19:14:35.097394
-For commit ID 7503cc9b00d3570c2b26a78cdeecab9f218b561c
-Grading at Mon Apr  4 15:14:34 EDT 2022
-Reading your quiz answers from answers.txt
-Your quiz answers are correct
-
-Overall Grade: PASSED

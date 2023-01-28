@@ -1,7 +1,0 @@
-Grading at 01/26/2022:21:48:20.298635
-For commit ID 926a9600b73c98f2933a604b560eec3565d2f05b
-Grading at Wed Jan 26 16:48:20 EST 2022
-Your file matched the expected output
-Your output matched what we expected
-
-Overall Grade: A
