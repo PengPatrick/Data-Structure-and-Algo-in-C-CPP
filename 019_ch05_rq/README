@@ -51,7 +51,7 @@ D. unistd.h
 
 A. It is always ignored.  You always put "return EXIT_SUCCESS;"
 B. The compiler checks it to see if there were any errors.
-C. Valgrind examines it to determine which variables were uninitialized.
+C. Valgrind examines it to determine which variables were uninitialized
 D. It informs the program which ran this program of its success or failure.
 
 

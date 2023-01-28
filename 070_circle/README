@@ -3,8 +3,8 @@ your "Point" class from the previous assignment. Start by symlinking
 point.hpp and point.cpp from the point directory into the current
 directory:
 
-  ln -s ../069_point/point.hpp
-  ln -s ../069_point/point.cpp
+  ln -s ../010_point/point.hpp
+  ln -s ../010_point/point.cpp
 
 Now write a circle.hpp file, which declares the class Circle. Your
 circle class should have two private fields:
@@ -32,7 +32,7 @@ Your circle should then have three pieces of public functionality:
 Declare these methods and constructor in your Circle class (in
 circle.hpp) and implement them in circle.cpp.
 
-You are provided a Makefile, which will compile your code into a program
+Create a "Makefile," which will compile your code into a program
 called "circles." Use the provided main.cpp, which has a main function
 that reads input from stdin. The input it reads starts with a line 
 containing the number of circles to have. The next (ncircles) lines

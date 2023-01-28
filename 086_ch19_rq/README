@@ -57,7 +57,7 @@ H. Any of std::bad_alloc, std::invalid_argument,
    or std::destructor_failure.
 
 
-7. Suppose the you have a function f, which calls another function g:
+7. Suppose that you have a function f, which calls another function g:
 
   int f(int x) {
     //some code

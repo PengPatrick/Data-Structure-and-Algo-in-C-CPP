@@ -1,6 +1,6 @@
 
 input1.txt
-xxxxxx
+xxxxx
 input1.txt input2.txt
 input2.txt
 input3.txt

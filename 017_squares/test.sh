@@ -12,7 +12,7 @@ int main(void) {
 EOF
 gcc -Wall -Werror -pedantic -std=gnu99 temp.c -o squares 2>errors.txt
 if [ "$?" = "0" ]
-then
+    then
     echo "Your code appears to have legal syntax!"
     echo "Here is what I get when I run squares(6,3,4,7)"
     echo "-----------------"
@@ -34,7 +34,7 @@ then
    *******
 EOF
     echo "---------------"
-else
+    else
     echo "Oh no, the syntax of your code is not correct!"
     mesg=`grep error errors.txt | head -1`
     ln=`echo "$mesg" | cut -f2 -d":"`
@@ -43,5 +43,6 @@ else
     echo "(though the problem may be earlier and I just got confused)"
     echo "Here is my best attempt to describe what is wrong:"
     echo "$mesg" | cut -f5 -d":"
-fi
+    fi
 rm -f temp.c errors.txt squares
+

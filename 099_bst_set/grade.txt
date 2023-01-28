@@ -1,0 +1,26 @@
+Grading at 11/18/2022:19:28:35.724991
+For commit ID 4ef10fa32618cee5b0bb6d7aa62864a2e5a83c77
+Grading at Fri Nov 18 02:28:32 PM EST 2022
+-----------------------------------------------
+testcase 1 : Testing with BstSet<int>
+...compiling...
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
+-----------------------------------------------
+testcase 2 : Testing with BstSet<std::string>
+...compiling...
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
+-----------------------------------------------
+testcase 3 : Testing with BstSet<(a custom class we wrote)>
+...compiling...
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
+
+Overall Grade: A

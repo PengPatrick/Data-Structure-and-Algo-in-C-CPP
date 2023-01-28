@@ -1,13 +1,3 @@
-/* learning objectives
-   - class syntax
-   - public/private access specifiers
-   - fields and member functions
-   - const member fcns
-   - std namespace
-   - organization into hpp and cpp file
-   - operator overloading
- */
-
 #include <cstdio>
 #include <cstdlib>
 
@@ -31,8 +21,6 @@ int main(void) {
   std::printf("Now v1 = ");
   v1.print();
   std::printf("\n");
-  std::printf("v1 . v2 = ");
-  std::printf("%.2f", v1.dot(v2)); 
-  std::printf("\n");
+  std::printf("v1 . v2 = %.2f\n", v1.dot(v2));
   return EXIT_SUCCESS;
 }

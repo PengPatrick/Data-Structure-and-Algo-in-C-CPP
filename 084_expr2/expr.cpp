@@ -1,42 +1,43 @@
-#include <iostream>
-#include "expr.h"
+#include "expr.hpp"
+
 #include <ctype.h>
-#include <cstdlib>
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
+
+#include <cstdlib>
+#include <iostream>
 
 Expression * parse(const char ** strp);
 
 void skipSpace(const char ** strp) {
-  while(isspace(**strp)) {
+  while (isspace(**strp)) {
     *strp = *strp + 1;
   }
 }
 Expression * makeExpr(char op, Expression * lhs, Expression * rhs) {
-  switch(op) {
-  case '+':
-    return new PlusExpression(lhs,rhs);
-  case '-':
-    return new MinusExpression(lhs,rhs);
-  case '*':
-    return new TimesExpression(lhs,rhs);
-  case '/':
-    return new DivExpression(lhs,rhs);
-  default:
-    std::cerr << "Impossible op char: " << op << "\n";
-    abort();
+  switch (op) {
+    case '+':
+      return new PlusExpression(lhs, rhs);
+    case '-':
+      return new MinusExpression(lhs, rhs);
+    case '*':
+      return new TimesExpression(lhs, rhs);
+    case '/':
+      return new DivExpression(lhs, rhs);
+    default:
+      std::cerr << "Impossible op char: " << op << "\n";
+      abort();
   }
 }
 bool isValidOp(char c) {
   return strchr("+-*/", c) != NULL;
 }
 
-
 Expression * parseOp(const char ** strp) {
   skipSpace(strp);
   char op = **strp;
   if (!isValidOp(op)) {
-    std::cerr << "Invalid op: "<< op<< "\n";
+    std::cerr << "Invalid op: " << op << "\n";
     return NULL;
   }
   *strp = *strp + 1;
@@ -52,9 +53,9 @@ Expression * parseOp(const char ** strp) {
   skipSpace(strp);
   if (**strp == ')') {
     *strp = *strp + 1;
-    return makeExpr(op,lhs,rhs);
+    return makeExpr(op, lhs, rhs);
   }
-  std::cerr <<"Expected ) but found " << *strp << "\n";
+  std::cerr << "Expected ) but found " << *strp << "\n";
   delete lhs;
   delete rhs;
   return NULL;

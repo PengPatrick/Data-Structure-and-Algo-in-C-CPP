@@ -35,8 +35,6 @@ array. It will provide the following functionality:
     IntArray & to print the array 
     o Format: 
         {element0, element1, element2, ... elementN-2, elementN-1}
-      If there are no elements, the output is
-      	{}
 
 Note that I have provided you with four files:
   - IntArray.h: provides the header (interface) of this class.  

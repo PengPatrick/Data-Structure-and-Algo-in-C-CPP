@@ -1,12 +1,12 @@
-Grading at 03/14/2022:17:11:11.114869
-For commit ID 75fcee6a0f6c071932d534b75fc5cfc80580b2bc
-Grading at Mon Mar 14 13:11:09 EDT 2022
+Grading at 10/23/2022:20:58:45.239224
+For commit ID 1b4aa6d27f50f7d6be00247eda23e13dd0a2e246
+Grading at Sun Oct 23 04:58:43 PM EDT 2022
 Attempting to compile:
-rm -f  circle.o  point.o  main.o circles *~
+rm -f  circle.o  main.o  point.o circles *~
 g++ -c -Wall -Werror -std=gnu++98 -pedantic -ggdb3 circle.cpp
-g++ -c -Wall -Werror -std=gnu++98 -pedantic -ggdb3 point.cpp
 g++ -c -Wall -Werror -std=gnu++98 -pedantic -ggdb3 main.cpp
-g++ -Wall -Werror -std=gnu++98 -pedantic -ggdb3 -o circles  circle.o  point.o  main.o
+g++ -c -Wall -Werror -std=gnu++98 -pedantic -ggdb3 point.cpp
+g++ -Wall -Werror -std=gnu++98 -pedantic -ggdb3 -o circles  circle.o  main.o  point.o
 Found binary 'circles'
 Your output matched what we expected
 

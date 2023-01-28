@@ -1,0 +1,23 @@
+#error
+printCountries 
+printCountries pop_invalid1.csv	
+printCountries pop_invalid2.csv	
+printCountries pop_invalid4.csv		
+printCountries pop_invalid6.csv	
+printCountries pop_invalid7.csv			
+printCountries pop_invalid10.csv	
+printCountries pop_invalid11.csv
+printRunningAvg population.csv
+printCumulative population.csv
+printDailyMax population.csv
+
+#success
+printCountries population.csv
+printRunningAvg population.csv daily_small.csv
+printCumulative population.csv daily_small.csv
+printDailyMax population.csv daily_small.csv
+printCountries pop_valid1.csv
+printCountries pop_valid2.csv
+printCountries pop_valid3.csv
+printCountries pop_valid4.csv
+

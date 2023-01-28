@@ -1,13 +1,13 @@
-Grading at 02/25/2022:21:55:05.752796
-For commit ID 02cbd190ec1f430e7dfff864bf2e4ef6d4b2c8b8
-Grading at Fri Feb 25 16:55:00 EST 2022
+Grading at 10/16/2022:19:45:18.151524
+For commit ID 05721fdc8d1cb26933ddc693cb6f6a796fd97e8e
+Grading at Sun Oct 16 03:45:13 PM EDT 2022
 Attempting to compile:
-rm -f  outname.o  counts.o  main.o  kv.o count_values *~
-gcc -c -Wall -Werror -std=gnu99 -pedantic -ggdb3 outname.c
+rm -f  counts.o  kv.o  main.o  outname.o count_values *~
 gcc -c -Wall -Werror -std=gnu99 -pedantic -ggdb3 counts.c
-gcc -c -Wall -Werror -std=gnu99 -pedantic -ggdb3 main.c
 gcc -c -Wall -Werror -std=gnu99 -pedantic -ggdb3 kv.c
-gcc -Wall -Werror -std=gnu99 -pedantic -ggdb3 -o count_values  outname.o  counts.o  main.o  kv.o
+gcc -c -Wall -Werror -std=gnu99 -pedantic -ggdb3 main.c
+gcc -c -Wall -Werror -std=gnu99 -pedantic -ggdb3 outname.c
+gcc -Wall -Werror -std=gnu99 -pedantic -ggdb3 -o count_values  counts.o  kv.o  main.o  outname.o
 #################################################
 testcase1:
 testcase1 passed, your program successfully indicated a failure

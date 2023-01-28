@@ -35,8 +35,7 @@ Requirements:
    on the text.  It should be in the range [0,26).  That is, the
    number you print should obey 0 <= answer < 26.
  - On failure, your program should print an appropriate error
-   message to stderr, then exit with EXIT_FAILURE.  Remember, the `fprintf`
-   function can be used to print a strint to `stderr`.
+   message to stderr, then exit with EXIT_FAILURE.
  - Provide a Makefile which compiles your program into
    a binary called "breaker".
 Hints:

@@ -1,14 +1,11 @@
 #!/bin/bash
-
-testdir="/usr/local/intro_prog/rot_matrix"
-
 run_test() {
     prog="$1"
     testfile="$2"
     IFS=$'\n'
-    for line in `cat $testfile | sed 's/^$/ /'`
+    for line in `cat $testfile |sed 's/^$/ /'`
     do
-	IFS=" " correct=`${testdir}/rotateMatrix $line 2>&1`
+	IFS=" " correct=`/usr/local/ece551/rot_matrix/rotateMatrix $line 2>&1`
 	IFS=" " broken=`$prog $line 2>&1`
 	if [ "$broken" != "$correct" ]
 	then
@@ -18,9 +15,9 @@ run_test() {
     return 1
 }
 
-for i in ${testdir}/rotateMatrix*
+for i in /usr/local/ece551/rot_matrix/rotateMatrix*
 do
-    if [ "$i" != "${testdir}/rotateMatrix" ]
+    if [ "$i" != "/usr/local/ece551/rot_matrix/rotateMatrix" ]
     then
 	echo "Checking `basename $i`"
 	run_test $i tests.txt

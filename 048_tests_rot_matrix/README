@@ -3,15 +3,16 @@ assignment.  As usual, the instructions for the next assignment are
 in next-README.
 
 For this assignment, we have created compiled binaries (in
-/usr/local/intro_prog/rot_matrix/  where rotateMatrix is correct,
+/usr/local/ece551/rot_matrix/  where rotateMatrix is correct,
 and the numbered ones are each broken in some way).
 
-As with 024_testing2, you will write a file called tests.txt, which will
-list the command line arguments you want to use to run the
-programs. However, unlike the previous assignment, you will also want to
-create a wide variety of input files. You can name them anything you want,
-as long as you save them in the current (048_tests_rot_matrix) directory,
-and submit them along with tests.txt.
+As with 023_testing2, you will write a file called tests.txt,
+which will list the command line arguments you want to use to
+run the programs.   However, unlike 023_testing2, you will
+also want to create a wide variety of input files.  You can
+name them anything you want, as long as you save them in the
+current (048_tests_rot_matrix) directory, and submit them
+along with tests.txt.
 
 For example, if you would run the program as:
 

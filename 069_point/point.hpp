@@ -1,14 +1,14 @@
 #ifndef POINT_H
 #define POINT_H
 
-class Point{
+class Point {
   double x;
   double y;
 
-public:
+ public:
   Point();
   void move(double dx, double dy);
-  double distanceFrom(const Point &p);
+  double distanceFrom(const Point & p);
 };
 
 #endif

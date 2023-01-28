@@ -1,4 +1,4 @@
-Consider the following function, which has 3 syntax errors in it:
+Consider the following function, which has three syntax errors in it.
 
 //begin code
                                  //line 1
@@ -11,7 +11,7 @@ int f(int x) {                   //line 2
                                  //line 8
 //end code                       
 
-Examine the code and find the 3 errors in it. Once you have found the
+Examine the code and find the three errors in it. Once you have found the
 errors in this code, open the file called "errors.txt", and write down the
 type of error on the line where it occurs. You should write one of the
 following:
@@ -30,4 +30,4 @@ file unchanged.
 Once you have identified the errors, correct them in the file "code.c". 
 
 Submit both "errors.txt" and "code.c" for grading (add both to git, commit,
-push, and grade). 
+push, and grade).

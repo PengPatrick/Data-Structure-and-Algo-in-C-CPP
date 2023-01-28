@@ -1,6 +1,6 @@
-Grading at 01/18/2022:06:56:20.666791
-For commit ID 5d38a85ad7de7f83ca14f399b2b9baaad003a7bd
-Grading at Tue Jan 18 01:56:20 EST 2022
+Grading at 09/07/2022:19:42:43.152369
+For commit ID e969cd37483f8670cbb497fe4f5d61d210133399
+Grading at Wed Sep  7 03:42:43 PM EDT 2022
 Checking syntax of declarations, and code that uses them
 mytypes.c makes legal, useable declarations
 Your file matched the expected output
